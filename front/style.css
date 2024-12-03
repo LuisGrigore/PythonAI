@@ -18,7 +18,7 @@
 .app{
 	width: 100%;
 	height: 100%;
-	height: 500px;
+	height: 550px;
 	width: 440px;
 	background: #fff;
 	
@@ -37,6 +37,7 @@ canvas{
 	aspect-ratio: 1 / 1;
 	background: lightgrey;
 	border-radius: 10px;
+	cursor: url('cursor.png'), auto;
 }
 
 .response{
@@ -58,6 +59,18 @@ canvas{
 	font-weight: bold;
 	color: #fff;
 }
+.resetButton{
+	border: none;
+	padding: 5px;
+	background-color: #153677;
+	border-radius: 10px;
+	cursor: pointer;
+	font-family: 'Arial', sans-serif;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 10px;
+}
+
 
 .answear{
 	height: 100%;
