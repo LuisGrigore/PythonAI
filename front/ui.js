@@ -1,7 +1,13 @@
+import Controller from "./controller.js";
+import Client from "./client.js";
+
+
 // script.js
 
 // Obtener el canvas y su contexto
 const canvas = document.getElementById('drawingCanvas');
+const submitButton = document.getElementById('submitButton');
+const resultText = document.getElementById('resultText');
 const ctx = canvas.getContext('2d');
 
 // Ajustar el tamaño del canvas al de la caja contenedora
@@ -68,3 +74,22 @@ canvas.addEventListener('touchmove', (e) => {
 });
 canvas.addEventListener('touchend', stopDrawing);
 canvas.addEventListener('touchcancel', stopDrawing);
+
+
+const client = new Client()
+const controller = new Controller(client)
+
+export function updateResultText(newText){
+	resultText.textContent = newText
+}
+
+
+submitButton.addEventListener('click', () =>{
+	const dataURL = canvas.toDataURL('image/png');
+	fetch(dataURL).then((result) => {
+		result.blob().then((image) => {
+			controller.sendImage(image)
+		})
+	})
+});
+
