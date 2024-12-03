@@ -37,7 +37,7 @@ canvas{
 	aspect-ratio: 1 / 1;
 	background: lightgrey;
 	border-radius: 10px;
-	cursor: url('cursor.png'), auto;
+	cursor: url('assets/cursor.png'), auto;
 }
 
 .response{

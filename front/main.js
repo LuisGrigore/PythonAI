@@ -1,8 +1,8 @@
-import { CanvasController } from "./canvas_controller.js";
-import { CanvasView } from "./canvas_view.js";
+import { CanvasController } from "./canvas/canvas_controller.js";
+import { CanvasView } from "./canvas/canvas_view.js";
 import Client from "./client.js";
-import { ResultController } from "./result_controller.js";
-import { ResultView } from "./result_view.js";
+import { ResultController } from "./result/result_controller.js";
+import { ResultView } from "./result/result_view.js";
 
 const canvas = document.getElementById('drawingCanvas');
 const submitButton = document.getElementById('submitButton');
