@@ -21,7 +21,7 @@ let lastY = 0;
 
 // Configuración del dibujo (color y grosor de línea)
 ctx.strokeStyle = '#000'; // Color negro
-ctx.lineWidth = 25;
+ctx.lineWidth = 30;
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 
