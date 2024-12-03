@@ -55,7 +55,7 @@ export class CanvasView{
 		this.lastY = y;
 	}
 
-	rest(){
+	reset(){
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 	}
 }

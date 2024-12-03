@@ -6,6 +6,7 @@ import { ResultView } from "./result/result_view.js";
 
 const canvas = document.getElementById('drawingCanvas');
 const submitButton = document.getElementById('submitButton');
+const resetButton = document.getElementById('resetButton');
 const resultText = document.getElementById('resultText');
 const ctx = canvas.getContext('2d');
 
@@ -19,30 +20,30 @@ const result_controller = new ResultController({result_view: result_view, http_c
 
 canvas.addEventListener('mousedown', (e) =>{
 	canvas_controller.startDrawing(e)
-});
+})
 canvas.addEventListener('mousemove',(e) =>{
 	 canvas_controller.draw(e)
-});
+})
 canvas.addEventListener('mouseup', () =>{
 	canvas_controller.stopDrawing()
-});
+})
 canvas.addEventListener('mouseout', () =>{
 	canvas_controller.stopDrawing()
-});
+})
 
 canvas.addEventListener('touchstart', (e) => {
 	canvas_controller.touchStart(e)
-});
+})
 canvas.addEventListener('touchmove', (e) => {
     canvas_controller.touchMove(e)
-});
+})
 
 canvas.addEventListener('touchend', () =>{
 	canvas_controller.stopDrawing()
-});
+})
 canvas.addEventListener('touchcancel', () =>{
 	canvas_controller.stopDrawing()
-});
+})
 
 
 submitButton.addEventListener('click', () =>{
@@ -52,7 +53,11 @@ submitButton.addEventListener('click', () =>{
 			result_controller.sendImage(image)
 		})
 	})
-});
+})
+
+resetButton.addEventListener('click', () =>{
+	canvas_controller.reset()
+})
 
 
 
